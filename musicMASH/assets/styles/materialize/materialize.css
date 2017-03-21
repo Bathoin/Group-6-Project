@@ -2209,10 +2209,11 @@ td, th {
 
 .collection {
   margin: 0.5rem 0 1rem 0;
-  border: 1px solid #e0e0e0;
-  border-radius: 2px;
+  border: 0px solid #e0e0e0;
+  border-radius: 10px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  padding-left: 0px; }
   .collection .collection-item {
     background-color: #fff;
     line-height: 1.5rem;
@@ -5332,7 +5333,7 @@ small {
   transition: box-shadow .25s;
   padding: 1.2px;
   margin: 0.5rem 0 1rem 0;
-  border-radius: 2px;
+  border-radius: 10px;
   background-color: #fff; }
 
 .card {
