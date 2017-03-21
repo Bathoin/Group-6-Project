@@ -16,14 +16,9 @@ Repository for a group project in the course ISQA-4380 at the University of Nebr
 
 1. Clone the repository to your computer
 2. Navigate to your local clone
-3. Run the following commands to get set up
+3. Run the following command to get set up
 ```sh
-npm install sails --save
-npm install grumpy --save
-npm install material-design-lite --save
-npm install material-design-icons --save
-npm install materialize-css --save
-npm install sails-mysql --save
+npm install
 ```
 
 :musical_note:
