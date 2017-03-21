@@ -1,0 +1,36 @@
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.slogan {
+  font-size: 60px;
+  padding-top: 20px;
+}
+
+.sub-slogan {
+  font-size: 28px;
+  padding-top: 24px;
+}
+
+.main-container {
+  width: 800px;
+}
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
