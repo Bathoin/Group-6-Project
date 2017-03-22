@@ -6,6 +6,23 @@
  */
 
 module.exports = {
-	
+
+  create: function (req, res, next) {
+    Music.create(req.params.all(), function musicCreated(err, music) {
+      if (err) return next(err);
+
+      res.redirect('/music/index');
+    })
+  },
+
+  index: function (req, res, next) {
+    Music.find(function foundMusic(err, music) {
+      if (err) return next(err);
+
+      res.view({
+        music: music
+      });
+    });
+  }
 };
 
