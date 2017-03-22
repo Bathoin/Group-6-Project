@@ -9,6 +9,29 @@ module.exports = {
 
   attributes: {
 
+    title: {
+      type: 'string',
+      required: true
+    },
+
+    artist: {
+      type: 'string',
+      required: true
+    },
+
+    length: {
+      type: 'float'
+    },
+
+    url: {
+      type: 'string',
+      required: true
+    },
+
+    provider: {
+      type: 'string',
+      required: true
+    }
   }
 };
 
