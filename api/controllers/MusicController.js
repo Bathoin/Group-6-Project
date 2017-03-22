@@ -1,7 +1,7 @@
 /**
  * MusicController
  *
- * @description :: Server-side logic for managing musics
+ * @description :: Server-side logic for managing music
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
