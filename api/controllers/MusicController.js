@@ -12,17 +12,32 @@ module.exports = {
       if (err) return next(err);
 
       res.redirect('/music/index');
-    })
+    });
   },
 
-  index: function (req, res, next) {
-    Music.find(function foundMusic(err, music) {
+  index: function (searchQuery, req, res, next) {
+    Music.find({
+      or: [
+        {title: {'like': searchQuery}},
+        {artist: {'like': searchQuery}}
+      ]
+    }).exec(function foundMusic(err, music) {
       if (err) return next(err);
 
       res.view({
         music: music
       });
     });
-  }
-};
+  },
 
+  getJson: function (req, res, next) {
+    Music.find().populateAll().exec(function (err, music) {
+      if (err) return next(err);
+      if (!music) return next();
+
+      res.json({
+        music: music
+      });
+    });
+  }
+}
