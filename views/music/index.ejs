@@ -38,7 +38,7 @@
     <!-- SoundCloud result -->
     <!-- SoundCloud Search API: https://developers.soundcloud.com/docs/api/guide#search -->
     <li class="collection-item avatar">
-      <img src="http://icons.iconarchive.com/icons/sicons/basic-round-social/512/soundcloud-icon.png" alt=""
+      <img id="providerLogo" src="http://icons.iconarchive.com/icons/sicons/basic-round-social/512/soundcloud-icon.png" alt=""
            class="circle">
       <!-- Song Title -->
       <span class="title">Smile Like You Mean It</span>
@@ -56,7 +56,7 @@
     <!-- YouTube result -->
     <!-- YouTube Search API: https://github.com/google/google-api-nodejs-client/blob/master/samples/youtube/search.js -->
     <li class="collection-item avatar">
-      <img src="https://www.jillwolcottknits.com/wp-content/uploads/2016/02/youtube-variation-round.png" alt=""
+      <img id="providerLogo" src="https://www.jillwolcottknits.com/wp-content/uploads/2016/02/youtube-variation-round.png" alt=""
            class="circle">
       <!-- Song Title -->
       <span class="title">Smile Like You Mean It</span>
@@ -74,7 +74,7 @@
     <!-- Spotify result -->
     <!-- Spotify Search API: https://github.com/thelinmichael/spotify-web-api-node -->
     <li class="collection-item avatar">
-      <img src="http://pre14.deviantart.net/5e2b/th/pre/f/2015/245/9/b/new_spotify_icon_by_mattroxzworld-d98301o.png"
+      <img id="providerLogo" src="http://pre14.deviantart.net/5e2b/th/pre/f/2015/245/9/b/new_spotify_icon_by_mattroxzworld-d98301o.png"
            alt=""
            class="circle">
       <!-- Song Title -->
@@ -97,10 +97,10 @@
     function searchingResults() {
         // Checks if its visible (if a list is displayed, hides it if true)
         if (document.getElementById('resultList').style.display == 'block') {
-            document.getElementById('resultList').style.display = 'none';
+            hideResults('resultList');
         }
-      document.getElementById('searchSpinner').style.display = 'block';
-      displayResults();
+        document.getElementById('searchSpinner').style.display = 'block';
+        displayResults();
     }
     ;
     // Hides spinner, displays resultList
@@ -109,11 +109,25 @@
       document.getElementById('searchSpinner').style.display = 'none';
       document.getElementById('resultList').style.display = 'block';
     }, 3000);
-    // Not used ATM
+
+    // Not in use atm
     function hideResults(target) {
       document.getElementById(target).style.display = 'none';
     }
     ;
+
+    // Function to find out what provider is listed, and set it's icon/logo
+    function setProviderLogo(provider) {
+        if (provider == "SoundCloud") {
+            document.getElementById('providerLogo').src = 'http://icons.iconarchive.com/icons/sicons/basic-round-social/512/soundcloud-icon.png';
+        } else if (provider == "YouTube") {
+            document.getElementById('providerLogo').src = 'https://www.jillwolcottknits.com/wp-content/uploads/2016/02/youtube-variation-round.png';
+        } else if (provider == "Spotify") {
+            document.getElementById('providerLogo').src = 'http://pre14.deviantart.net/5e2b/th/pre/f/2015/245/9/b/new_spotify_icon_by_mattroxzworld-d98301o.png';
+        } else {
+          document.getElementById('providerLogo').src = '';
+        }
+    }
   </script>
 </div>
 
