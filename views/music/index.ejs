@@ -95,7 +95,7 @@
   <script>
     // Display loading spinner, then call method to display resultList
     function searchingResults() {
-        // Checks if its visible (if a list is displayed, hides it if true)
+        // Checks if its visible (if a list is displayed), hides it if true
         if (document.getElementById('resultList').style.display == 'block') {
             hideResults('resultList');
         }
@@ -110,7 +110,7 @@
       document.getElementById('resultList').style.display = 'block';
     }, 3000);
 
-    // Not in use atm
+    // Hides the target from the page
     function hideResults(target) {
       document.getElementById(target).style.display = 'none';
     }
