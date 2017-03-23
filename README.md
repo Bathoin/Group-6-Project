@@ -1,4 +1,4 @@
-# musicMASH (Temporary name) - Node/Sails :sailboat:
+# musicMASH (working name) - Node/Sails :sailboat:
 
 ## About
 _musicMASH_, a cross-service search application to browse music through SoundCloud, Spotify, and YouTube.
